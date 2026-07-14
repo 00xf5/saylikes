@@ -5,7 +5,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 object ApiClient {
-    var baseUrl: String = "https://sayhi-likes-admin.vercel.app"
+    var baseUrl: String = "https://saylikes.vercel.app"
 
     data class HowTo(
         val text: String,

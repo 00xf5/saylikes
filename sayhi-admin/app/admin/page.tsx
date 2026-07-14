@@ -14,6 +14,8 @@ type Device = {
   trialLikesRemaining?: number;
 };
 
+type StorageInfo = { mode: string; ok: boolean; hint: string };
+
 function fmt(ts: number | null | undefined) {
   if (!ts) return "—";
   return new Date(ts).toLocaleString();
@@ -22,6 +24,7 @@ function fmt(ts: number | null | undefined) {
 export default function AdminPage() {
   const router = useRouter();
   const [devices, setDevices] = useState<Device[]>([]);
+  const [storage, setStorage] = useState<StorageInfo | null>(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [q, setQ] = useState("");
@@ -36,14 +39,14 @@ export default function AdminPage() {
       router.replace("/admin/login");
       return;
     }
+    const data = await res.json().catch(() => ({}));
     if (!res.ok) {
-      const data = await res.json().catch(() => ({}));
       setError(data.error || "Failed to load devices");
       setLoaded(true);
       return;
     }
-    const data = await res.json();
     setDevices(data.devices || []);
+    setStorage(data.storage || null);
     const n: Record<string, string> = {};
     for (const d of data.devices || []) n[d.uuid] = d.note || "";
     setNotes(n);
@@ -59,9 +62,7 @@ export default function AdminPage() {
     const s = q.trim().toLowerCase();
     if (!s) return devices;
     return devices.filter(
-      (d) =>
-        d.uuid.toLowerCase().includes(s) ||
-        (d.note || "").toLowerCase().includes(s)
+      (d) => d.uuid.toLowerCase().includes(s) || (d.note || "").toLowerCase().includes(s)
     );
   }, [devices, q]);
 
@@ -80,7 +81,8 @@ export default function AdminPage() {
       return;
     }
     if (!res.ok) {
-      setError("Update failed");
+      const data = await res.json().catch(() => ({}));
+      setError(data.error || "Update failed — is Blob connected?");
       return;
     }
     await load();
@@ -100,10 +102,13 @@ export default function AdminPage() {
   async function addManual() {
     const uuid = manualUuid.trim();
     if (uuid.length < 8) {
-      setError("Paste a full Device ID");
+      setError("Paste the full Device ID from the phone app");
       return;
     }
-    await patch(uuid, { note: notes[uuid] || "Added manually", setDaysFromNow: 7 });
+    await patch(uuid, {
+      note: notes[uuid] || "Added from admin",
+      setDaysFromNow: Number(days["_new"] || 7)
+    });
     setManualUuid("");
   }
 
@@ -114,214 +119,187 @@ export default function AdminPage() {
 
   if (!loaded) {
     return (
-      <main style={{ maxWidth: 1100, margin: "0 auto", padding: 24 }}>
-        <p style={{ color: "#94a3b8" }}>Loading admin…</p>
+      <main className="admin-shell">
+        <p className="muted">Loading…</p>
       </main>
     );
   }
 
   return (
-    <main style={{ maxWidth: 1100, margin: "0 auto", padding: 24 }}>
-      <header style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-        <div style={{ flex: 1 }}>
-          <h1 style={{ margin: 0 }}>Devices</h1>
-          <p style={{ margin: "6px 0 0", color: "#94a3b8", fontSize: 14 }}>
-            Activate subscriptions by Device ID from the Android app.
-          </p>
+    <main className="admin-shell">
+      <header className="admin-top">
+        <div className="admin-brand">
+          <div className="admin-brand-mark">SH</div>
+          <div>
+            <h1 className="admin-title">Devices</h1>
+            <p className="admin-sub">{devices.length} registered · manage subscriptions by UUID</p>
+          </div>
         </div>
-        <Link href="/admin/howto" style={navLink}>
-          How-to / pricing
-        </Link>
-        <button onClick={logout} style={ghostBtn}>
-          Logout
-        </button>
+        <div className="admin-actions">
+          <Link className="btn btn-ghost" href="/admin/howto" style={{ textDecoration: "none" }}>
+            How-to / pricing
+          </Link>
+          <button className="btn btn-ghost" onClick={() => load()}>
+            Refresh
+          </button>
+          <button className="btn btn-ghost" onClick={logout}>
+            Logout
+          </button>
+        </div>
       </header>
 
-      {error && <p style={errorBox}>{error}</p>}
+      {storage && (
+        <div className={`banner ${storage.ok ? "banner-ok" : "banner-bad"}`}>
+          <strong>Storage:</strong> {storage.mode.toUpperCase()} — {storage.hint}
+        </div>
+      )}
 
-      <section style={{ ...card, marginTop: 20 }}>
-        <h2 style={{ margin: "0 0 10px", fontSize: 16 }}>Add / activate Device ID</h2>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+      {devices.length === 0 && storage?.ok && (
+        <div className="banner banner-warn">
+          No devices yet. On the phone: open <strong>SayHi Likes</strong> (updated APK pointing to
+          saylikes.vercel.app). Copy the Device ID, or it will appear here after register. You can
+          also paste it below and activate immediately.
+        </div>
+      )}
+
+      {error && <div className="banner banner-bad">{error}</div>}
+
+      <section className="panel" style={{ marginBottom: 14 }}>
+        <h2 style={{ margin: "0 0 10px", fontSize: 15 }}>Activate Device ID</h2>
+        <div className="row">
           <input
+            className="field"
+            style={{ flex: 1, minWidth: 240 }}
             value={manualUuid}
             onChange={(e) => setManualUuid(e.target.value)}
-            placeholder="Paste UUID from user"
-            style={{ ...inputStyle, flex: 1, minWidth: 220 }}
+            placeholder="Paste Device ID from phone"
           />
-          <button style={btn} onClick={addManual} disabled={!!busy}>
-            Activate 7 days
+          <input
+            className="field"
+            style={{ width: 90 }}
+            value={days["_new"] || "7"}
+            onChange={(e) => setDays((s) => ({ ...s, _new: e.target.value }))}
+            placeholder="days"
+          />
+          <button className="btn" onClick={addManual} disabled={!!busy}>
+            Activate
           </button>
         </div>
       </section>
 
-      <div style={{ marginTop: 16, marginBottom: 8 }}>
+      <div className="row" style={{ marginBottom: 10 }}>
         <input
+          className="field"
+          style={{ maxWidth: 360 }}
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search UUID or note…"
-          style={{ ...inputStyle, width: "100%", maxWidth: 420 }}
         />
       </div>
 
-      <div style={{ display: "grid", gap: 14, marginTop: 12 }}>
-        {filtered.length === 0 && (
-          <p style={{ color: "#94a3b8" }}>
-            No devices yet. User must open the Android app once so it registers.
+      <section className="panel" style={{ overflowX: "auto" }}>
+        {filtered.length === 0 ? (
+          <p className="muted" style={{ margin: 0 }}>
+            Nothing to show.
           </p>
+        ) : (
+          <div className="device-grid">
+            {filtered.map((d) => {
+              const expired = d.expiresAt != null && d.expiresAt < Date.now();
+              const paid = d.active && !expired;
+              const trial = d.trialLikesRemaining ?? 0;
+              return (
+                <div key={d.uuid} className="device-card panel" style={{ padding: 14 }}>
+                  <div className="row" style={{ marginBottom: 8 }}>
+                    <code>{d.uuid}</code>
+                    <span className={`pill ${paid ? "pill-ok" : "pill-off"}`}>
+                      {paid ? "PAID" : "UNPAID"}
+                    </span>
+                    {trial > 0 && <span className="pill pill-trial">TRIAL {trial}</span>}
+                  </div>
+                  <div className="muted">
+                    Last seen {fmt(d.lastSeenAt)} · Expires {fmt(d.expiresAt)}
+                  </div>
+                  <input
+                    className="field"
+                    style={{ marginTop: 10 }}
+                    value={notes[d.uuid] || ""}
+                    onChange={(e) => setNotes((s) => ({ ...s, [d.uuid]: e.target.value }))}
+                    placeholder="Note (customer name / payment)"
+                  />
+                  <div className="row" style={{ marginTop: 10 }}>
+                    <input
+                      className="field"
+                      style={{ width: 80 }}
+                      placeholder="days"
+                      value={days[d.uuid] || ""}
+                      onChange={(e) => setDays((s) => ({ ...s, [d.uuid]: e.target.value }))}
+                    />
+                    <button
+                      className="btn"
+                      disabled={busy === d.uuid}
+                      onClick={() =>
+                        patch(d.uuid, {
+                          setDaysFromNow: Number(days[d.uuid] || 30),
+                          note: notes[d.uuid] || ""
+                        })
+                      }
+                    >
+                      Set days
+                    </button>
+                    <button
+                      className="btn"
+                      disabled={busy === d.uuid}
+                      onClick={() =>
+                        patch(d.uuid, {
+                          extendDays: Number(days[d.uuid] || 30),
+                          note: notes[d.uuid] || ""
+                        })
+                      }
+                    >
+                      Extend
+                    </button>
+                    <button
+                      className="btn"
+                      disabled={busy === d.uuid}
+                      onClick={() =>
+                        patch(d.uuid, {
+                          active: true,
+                          expiresAt: null,
+                          note: notes[d.uuid] || ""
+                        })
+                      }
+                    >
+                      Unlimited
+                    </button>
+                    <button
+                      className="btn btn-ghost"
+                      disabled={busy === d.uuid}
+                      onClick={() => patch(d.uuid, { note: notes[d.uuid] || "" })}
+                    >
+                      Save note
+                    </button>
+                    <button
+                      className="btn btn-ghost"
+                      disabled={busy === d.uuid}
+                      onClick={() => patch(d.uuid, { active: false, note: notes[d.uuid] || "" })}
+                    >
+                      Disable
+                    </button>
+                    <button
+                      className="btn btn-danger"
+                      disabled={busy === d.uuid}
+                      onClick={() => remove(d.uuid)}
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         )}
-        {filtered.map((d) => {
-          const expired = d.expiresAt != null && d.expiresAt < Date.now();
-          const paid = d.active && !expired;
-          const trial = d.trialLikesRemaining ?? 0;
-          return (
-            <div key={d.uuid} style={card}>
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-                <code style={{ color: "#f8fafc", fontSize: 13 }}>{d.uuid}</code>
-                <span style={pill(paid)}>{paid ? "PAID ACTIVE" : "NO SUB"}</span>
-                {trial > 0 && <span style={pillTrial}>TRIAL {trial} left</span>}
-              </div>
-              <div style={{ color: "#94a3b8", fontSize: 13, marginTop: 8 }}>
-                Last seen: {fmt(d.lastSeenAt)} · Expires: {fmt(d.expiresAt)} · Created:{" "}
-                {fmt(d.createdAt)}
-              </div>
-              <input
-                value={notes[d.uuid] || ""}
-                onChange={(e) => setNotes((s) => ({ ...s, [d.uuid]: e.target.value }))}
-                placeholder="Note (name / payment)"
-                style={{ ...inputStyle, marginTop: 10, width: "100%" }}
-              />
-              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
-                <input
-                  style={{ ...inputStyle, width: 90 }}
-                  placeholder="days"
-                  value={days[d.uuid] || ""}
-                  onChange={(e) => setDays((s) => ({ ...s, [d.uuid]: e.target.value }))}
-                />
-                <button
-                  disabled={busy === d.uuid}
-                  style={btn}
-                  onClick={() =>
-                    patch(d.uuid, {
-                      setDaysFromNow: Number(days[d.uuid] || 30),
-                      note: notes[d.uuid] || ""
-                    })
-                  }
-                >
-                  Set days
-                </button>
-                <button
-                  disabled={busy === d.uuid}
-                  style={btn}
-                  onClick={() =>
-                    patch(d.uuid, {
-                      extendDays: Number(days[d.uuid] || 30),
-                      note: notes[d.uuid] || ""
-                    })
-                  }
-                >
-                  Extend
-                </button>
-                <button
-                  disabled={busy === d.uuid}
-                  style={btn}
-                  onClick={() =>
-                    patch(d.uuid, { active: true, expiresAt: null, note: notes[d.uuid] || "" })
-                  }
-                >
-                  Unlimited
-                </button>
-                <button
-                  disabled={busy === d.uuid}
-                  style={ghostBtn}
-                  onClick={() => patch(d.uuid, { active: false, note: notes[d.uuid] || "" })}
-                >
-                  Disable
-                </button>
-                <button
-                  disabled={busy === d.uuid}
-                  style={ghostBtn}
-                  onClick={() => patch(d.uuid, { note: notes[d.uuid] || "" })}
-                >
-                  Save note
-                </button>
-                <button disabled={busy === d.uuid} style={dangerBtn} onClick={() => remove(d.uuid)}>
-                  Delete
-                </button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      </section>
     </main>
   );
 }
-
-const card: React.CSSProperties = {
-  background: "#1e293b",
-  border: "1px solid #334155",
-  borderRadius: 14,
-  padding: 16
-};
-
-const inputStyle: React.CSSProperties = {
-  padding: "10px 12px",
-  borderRadius: 10,
-  border: "1px solid #475569",
-  background: "#fff",
-  color: "#0f172a",
-  boxSizing: "border-box"
-};
-
-const btn: React.CSSProperties = {
-  padding: "10px 12px",
-  borderRadius: 10,
-  border: 0,
-  background: "#0f766e",
-  color: "#fff",
-  fontWeight: 600,
-  cursor: "pointer"
-};
-
-const ghostBtn: React.CSSProperties = {
-  ...btn,
-  background: "#334155"
-};
-
-const dangerBtn: React.CSSProperties = {
-  ...btn,
-  background: "#b91c1c"
-};
-
-const navLink: React.CSSProperties = {
-  color: "#5eead4",
-  textDecoration: "none",
-  fontWeight: 600
-};
-
-const errorBox: React.CSSProperties = {
-  color: "#fecaca",
-  background: "#7f1d1d",
-  borderRadius: 10,
-  padding: "10px 12px",
-  marginTop: 14
-};
-
-function pill(on: boolean): React.CSSProperties {
-  return {
-    fontSize: 11,
-    fontWeight: 700,
-    padding: "3px 8px",
-    borderRadius: 999,
-    background: on ? "#14532d" : "#7c2d12",
-    color: on ? "#bbf7d0" : "#fed7aa"
-  };
-}
-
-const pillTrial: React.CSSProperties = {
-  fontSize: 11,
-  fontWeight: 700,
-  padding: "3px 8px",
-  borderRadius: 999,
-  background: "#713f12",
-  color: "#fde68a"
-};
