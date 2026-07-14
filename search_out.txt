@@ -1,0 +1,34 @@
+﻿=== TEXTS ===
+'BASIC' |  | clickable= false | [112,429][181,462]
+'ADVANCED' |  | clickable= false | [296,429][422,462]
+'BY ID' |  | clickable= false | [543,429][602,462]
+'Interest In' |  | clickable= false | [56,522][172,558]
+'FEMALE' |  | clickable= false | [104,576][196,609]
+'MALE' |  | clickable= false | [327,576][392,609]
+'ANY' |  | clickable= false | [545,576][593,609]
+'Distance' |  | clickable= false | [56,652][157,688]
+'50km' | android:id/text1 | clickable= false | [46,700][578,737]
+'Login within' |  | clickable= false | [56,773][195,809]
+'3 days' | android:id/text1 | clickable= false | [46,821][578,858]
+'Avatar verified' | com.unearby.sayhi:id/cb_avatar_verified | clickable= true | [46,870][674,934]
+'CANCEL' | com.unearby.sayhi:id/bt_cancel | clickable= true | [46,1110][354,1190]
+'SEARCH' | com.unearby.sayhi:id/bt_ok | clickable= true | [366,1110][674,1190]
+=== DESCS ===
+'Basic' |  | [40,398][253,494] | clickable= false
+'Advanced' |  | [253,398][466,494] | clickable= true
+'By ID' |  | [466,398][680,494] | clickable= true
+'Female' |  | [46,558][255,628] | clickable= true
+'Male' |  | [255,558][464,628] | clickable= false
+'Any' |  | [464,558][674,628] | clickable= true
+=== RESOURCE IDS ===
+android:id/content android.widget.FrameLayout [40,398][680,1198]
+com.unearby.sayhi:id/tab_layout android.widget.HorizontalScrollView [40,398][680,494]
+com.unearby.sayhi:id/filter_vp androidx.viewpager.widget.ViewPager [40,496][680,1196]
+com.unearby.sayhi:id/filter_gender android.widget.HorizontalScrollView [46,558][674,628]
+com.unearby.sayhi:id/sp_distance android.widget.Spinner [46,688][674,749]
+android:id/text1 android.widget.TextView [46,700][578,737]
+com.unearby.sayhi:id/sp_time_appeared android.widget.Spinner [46,809][674,870]
+com.unearby.sayhi:id/cb_avatar_verified android.widget.CheckBox [46,870][674,934]
+com.unearby.sayhi:id/layout_ok_cancel android.widget.LinearLayout [40,1104][680,1196]
+com.unearby.sayhi:id/bt_cancel android.widget.Button [46,1110][354,1190]
+com.unearby.sayhi:id/bt_ok android.widget.Button [366,1110][674,1190]

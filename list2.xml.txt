@@ -1,0 +1,184 @@
+=== TEXTS ===
+'Rami' | android:id/text1 | click=false | [192,224][245,257] | android.widget.TextView
+'0.01km · online' | com.unearby.sayhi:id/tv_last_seen | click=false | [563,212][698,236] | android.widget.TextView
+'26' | android:id/message | click=false | [192,271][261,295] | android.widget.TextView
+'.' | android:id/title | click=false | [192,307][352,332] | android.widget.TextView
+'Fajer N Arbi' | android:id/text1 | click=false | [192,415][314,448] | android.widget.TextView
+'0.01km · online' | com.unearby.sayhi:id/tv_last_seen | click=false | [563,403][698,427] | android.widget.TextView
+'25' | android:id/message | click=false | [192,462][261,486] | android.widget.TextView
+'[You are very close]' | android:id/title | click=false | [192,498][461,523] | android.widget.TextView
+'Original CARDIDASI fully automatic wristwatch for men. Only 76k #watch #wristwatchvendorinlagos #cardidasi#automaticwristwatch #automaticwristwatchformen' | com.unearby.sayhi:id/tv_listitem_ad_desc | click=false | [20,650][700,729] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'AD' |  | click=false | [24,1248][45,1272] | android.widget.TextView
+'mobo.tc' | com.unearby.sayhi:id/tv_listitem_ad_title | click=false | [110,1215][498,1305] | android.widget.TextView
+'VIEW NOW' | com.unearby.sayhi:id/tt_creative_btn | click=true | [504,1232][684,1288] | android.widget.Button
+'عزوز' | android:id/text1 | click=false | [192,1340][233,1372] | android.widget.TextView
+'0.01km · online' | com.unearby.sayhi:id/tv_last_seen | click=false | [563,1328][698,1352] | android.widget.TextView
+'find' |  | click=false | [0,0][0,0] | android.widget.TextView
+'chats' |  | click=false | [0,0][0,0] | android.widget.TextView
+'explore' |  | click=false | [0,0][0,0] | android.widget.TextView
+'contacts' |  | click=false | [0,0][0,0] | android.widget.TextView
+'profile' |  | click=false | [0,0][0,0] | android.widget.TextView
+=== DESCS ===
+'Search' | com.unearby.sayhi:id/action_search | click=true | [608,86][720,182]
+'NativeVideoTsView' |  | click=false | [20,735][700,1215]
+'find' |  | click=false | [0,1372][144,1436]
+'8 new notifications' |  | click=true | [144,1372][288,1436]
+'explore' |  | click=true | [288,1372][432,1436]
+'contacts' |  | click=true | [432,1372][576,1436]
+'profile' |  | click=true | [576,1372][720,1436]
+=== CLICKABLE / IMAGE ===
+android.widget.LinearLayout | com.unearby.sayhi:id/action_bar_root | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.FrameLayout | android:id/content | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.RelativeLayout | com.unearby.sayhi:id/main_layout | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.RelativeLayout | com.unearby.sayhi:id/arc_menu | click=false | desc='' | text='' | [0,0][720,1436]
+com.google.android.material.floatingactionbutton.FloatingActionButton | android:id/widget_frame | click=true | desc='' | text='' | [560,1236][688,1364]
+android.widget.FrameLayout | com.unearby.sayhi:id/header | click=false | desc='' | text='' | [0,0][720,192]
+android.view.ViewGroup | com.unearby.sayhi:id/toolbar | click=false | desc='' | text='' | [0,80][720,188]
+android.widget.Button | com.unearby.sayhi:id/action_search | click=true | desc='Search' | text='' | [608,86][720,182]
+android.widget.HorizontalScrollView | com.unearby.sayhi:id/tab_layout_header | click=false | desc='' | text='' | [100,80][620,192]
+android.widget.ImageView |  | click=false | desc='' | text='' | [157,107][215,165]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [290,91][429,181]
+android.widget.ImageView |  | click=false | desc='' | text='' | [340,117][378,155]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [463,91][603,181]
+android.widget.ImageView |  | click=false | desc='' | text='' | [514,117][552,155]
+androidx.viewpager.widget.ViewPager | com.unearby.sayhi:id/viewpager | click=false | desc='' | text='' | [0,192][720,1372]
+android.view.ViewGroup | com.unearby.sayhi:id/progressbar | click=false | desc='' | text='' | [0,192][720,1372]
+androidx.recyclerview.widget.RecyclerView | android:id/list | click=false | desc='' | text='' | [0,192][720,1372]
+android.widget.RelativeLayout |  | click=true | desc='' | text='' | [0,192][720,384]
+android.widget.ImageView | com.unearby.sayhi:id/iv_crown | click=false | desc='' | text='' | [20,204][188,372]
+android.widget.ImageView | android:id/icon | click=false | desc='' | text='' | [40,224][168,352]
+android.widget.FrameLayout | com.unearby.sayhi:id/shimmer_view_container | click=false | desc='' | text='' | [192,224][559,257]
+android.widget.TextView | android:id/text1 | click=false | desc='' | text='Rami' | [192,224][245,257]
+android.widget.TextView | com.unearby.sayhi:id/tv_last_seen | click=false | desc='' | text='0.01km · online' | [563,212][698,236]
+android.widget.TextView | android:id/message | click=false | desc='' | text='26' | [192,271][261,295]
+android.widget.TextView | com.unearby.sayhi:id/tv_msg_status | click=false | desc='' | text='' | [265,269][694,301]
+android.widget.TextView | android:id/title | click=false | desc='' | text='.' | [192,307][352,332]
+android.widget.RelativeLayout |  | click=true | desc='' | text='' | [0,383][720,575]
+android.widget.ImageView | com.unearby.sayhi:id/iv_crown | click=false | desc='' | text='' | [20,395][188,563]
+android.widget.ImageView | android:id/icon | click=false | desc='' | text='' | [40,415][168,543]
+android.widget.FrameLayout | com.unearby.sayhi:id/shimmer_view_container | click=false | desc='' | text='' | [192,415][559,448]
+android.widget.TextView | android:id/text1 | click=false | desc='' | text='Fajer N Arbi' | [192,415][314,448]
+android.widget.TextView | com.unearby.sayhi:id/tv_last_seen | click=false | desc='' | text='0.01km · online' | [563,403][698,427]
+android.widget.TextView | android:id/message | click=false | desc='' | text='25' | [192,462][261,486]
+android.widget.TextView | com.unearby.sayhi:id/tv_msg_status | click=false | desc='' | text='' | [265,460][694,492]
+android.widget.TextView | android:id/title | click=false | desc='' | text='[You are very close]' | [192,498][461,523]
+android.widget.RelativeLayout |  | click=true | desc='' | text='' | [0,574][720,1309]
+android.widget.RelativeLayout | com.unearby.sayhi:id/icon_source_layout | click=false | desc='' | text='' | [20,584][700,644]
+android.widget.ImageView | com.unearby.sayhi:id/iv_listitem_icon | click=false | desc='' | text='' | [20,584][80,644]
+android.widget.ImageView | com.unearby.sayhi:id/iv_listitem_dislike | click=true | desc='' | text='' | [640,584][680,644]
+android.widget.TextView | com.unearby.sayhi:id/tv_listitem_ad_desc | click=false | desc='' | text='Original CARDIDASI fully automatic wristwatch for men. Only 76k #watch #wristwatchvendorinlagos #cardidasi#automaticwristwatch #automaticwristwatchformen' | [20,650][700,729]
+android.widget.FrameLayout | com.unearby.sayhi:id/iv_listitem_video | click=false | desc='' | text='' | [20,735][700,1215]
+android.widget.FrameLayout |  | click=true | desc='' | text='' | [20,735][700,1215]
+android.widget.RelativeLayout | com.unearby.sayhi:id/ad_title_creative_btn_layout | click=false | desc='' | text='' | [20,1215][700,1305]
+android.widget.RelativeLayout | com.unearby.sayhi:id/tt_ad_logo | click=false | desc='' | text='' | [20,1242][100,1278]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.LinearLayout |  | click=true | desc='' | text='' | [20,1248][49,1272]
+android.widget.TextView | com.unearby.sayhi:id/tv_listitem_ad_title | click=false | desc='' | text='mobo.tc' | [110,1215][498,1305]
+android.widget.Button | com.unearby.sayhi:id/tt_creative_btn | click=true | desc='' | text='VIEW NOW' | [504,1232][684,1288]
+android.widget.RelativeLayout |  | click=true | desc='' | text='' | [0,1308][720,1372]
+android.widget.ImageView | com.unearby.sayhi:id/iv_crown | click=false | desc='' | text='' | [20,1320][188,1372]
+android.widget.ImageView | android:id/icon | click=false | desc='' | text='' | [40,1340][168,1372]
+android.widget.FrameLayout | com.unearby.sayhi:id/shimmer_view_container | click=false | desc='' | text='' | [192,1340][559,1372]
+android.widget.TextView | android:id/text1 | click=false | desc='' | text='عزوز' | [192,1340][233,1372]
+android.widget.TextView | com.unearby.sayhi:id/tv_last_seen | click=false | desc='' | text='0.01km · online' | [563,1328][698,1352]
+android.view.View | com.unearby.sayhi:id/vp_header | click=false | desc='' | text='' | [0,192][720,194]
+android.widget.HorizontalScrollView | com.unearby.sayhi:id/tab_layout_bottom | click=false | desc='' | text='' | [0,1372][720,1436]
+android.widget.ImageView |  | click=false | desc='' | text='' | [30,1383][114,1436]
+android.widget.LinearLayout |  | click=true | desc='8 new notifications' | text='' | [144,1372][288,1436]
+android.widget.ImageView |  | click=false | desc='' | text='' | [192,1398][240,1436]
+android.widget.LinearLayout |  | click=true | desc='explore' | text='' | [288,1372][432,1436]
+android.widget.ImageView |  | click=false | desc='' | text='' | [336,1398][384,1436]
+android.widget.LinearLayout |  | click=true | desc='contacts' | text='' | [432,1372][576,1436]
+android.widget.ImageView |  | click=false | desc='' | text='' | [480,1398][528,1436]
+android.widget.LinearLayout |  | click=true | desc='profile' | text='' | [576,1372][720,1436]
+android.widget.ImageView |  | click=false | desc='' | text='' | [612,1398][684,1436]
+android.view.View | android:id/navigationBarBackground | click=false | desc='' | text='' | [0,0][0,0]

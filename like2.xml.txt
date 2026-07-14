@@ -1,0 +1,17 @@
+=== TEXTS ===
+'1/1' |  | click=false | [144,109][206,163] | android.widget.TextView
+'9' | com.unearby.sayhi:id/tv_like | click=false | [0,0][0,0] | android.widget.TextView
+=== DESCS ===
+'Navigate up' |  | click=true | [0,80][112,192]
+=== CLICKABLE / IMAGE ===
+android.widget.LinearLayout | com.unearby.sayhi:id/action_bar_root | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.FrameLayout | android:id/content | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.RelativeLayout | com.unearby.sayhi:id/layout | click=false | desc='' | text='' | [0,0][720,1436]
+androidx.viewpager.widget.ViewPager | com.unearby.sayhi:id/vp_photo_list | click=false | desc='' | text='' | [0,80][720,1436]
+android.widget.ImageView |  | click=false | desc='' | text='' | [0,80][720,1436]
+android.view.ViewGroup | com.unearby.sayhi:id/toolbar | click=false | desc='' | text='' | [0,80][720,192]
+android.widget.ImageButton |  | click=true | desc='Navigate up' | text='' | [0,80][112,192]
+android.widget.ImageView | com.unearby.sayhi:id/bt_like | click=true | desc='' | text='' | [310,1386][410,1436]
+android.widget.TextView | com.unearby.sayhi:id/tv_like | click=false | desc='' | text='9' | [0,0][0,0]
+android.view.View | android:id/statusBarBackground | click=false | desc='' | text='' | [0,0][720,80]
+android.view.View | android:id/navigationBarBackground | click=false | desc='' | text='' | [0,0][0,0]

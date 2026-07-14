@@ -1,0 +1,73 @@
+=== TEXTS ===
+'Rami' | com.unearby.sayhi:id/tv_display_name | click=false | [0,724][218,763] | android.widget.TextView
+'5"' | com.unearby.sayhi:id/tv_voice_show | click=true | [615,726][714,798] | android.widget.TextView
+'.' | com.unearby.sayhi:id/tv_status | click=true | [8,798][720,834] | android.widget.TextView
+'26' | com.unearby.sayhi:id/tv_gender_age | click=false | [14,844][83,868] | android.widget.TextView
+'0.01km · online' | com.unearby.sayhi:id/tv_location | click=false | [543,840][710,870] | android.widget.TextView
+'ID' |  | click=false | [20,903][40,933] | android.widget.TextView
+'92770907' | com.unearby.sayhi:id/tv_id | click=true | [20,933][190,1003] | android.widget.TextView
+'Interest In' |  | click=false | [380,903][477,933] | android.widget.TextView
+'Female' | com.unearby.sayhi:id/tv_interest_in | click=false | [380,933][474,1003] | android.widget.TextView
+'Introduction' |  | click=false | [0,1100][158,1130] | android.widget.TextView
+'0555 760 771' | com.unearby.sayhi:id/tv_introduction | click=false | [0,1130][214,1200] | android.widget.TextView
+'Height' |  | click=false | [20,1211][84,1241] | android.widget.TextView
+'>185cm' | com.unearby.sayhi:id/tv_height | click=false | [20,1241][123,1311] | android.widget.TextView
+'Body Shape' |  | click=false | [380,1211][495,1241] | android.widget.TextView
+'Slim' | com.unearby.sayhi:id/tv_body_type | click=false | [380,1241][436,1311] | android.widget.TextView
+'Ethnicity' |  | click=false | [20,1321][103,1351] | android.widget.TextView
+'Native American' | com.unearby.sayhi:id/tv_ethnicity | click=false | [20,1351][232,1421] | android.widget.TextView
+'Blood Type' |  | click=false | [380,1321][489,1351] | android.widget.TextView
+'AB' | com.unearby.sayhi:id/tv_blood | click=false | [380,1351][417,1421] | android.widget.TextView
+'Hair Color' |  | click=false | [20,1431][117,1436] | android.widget.TextView
+'Light brown' | com.unearby.sayhi:id/tv_hair | click=false | [0,0][0,0] | android.widget.TextView
+'Eye Color' |  | click=false | [380,1431][472,1436] | android.widget.TextView
+'Green' | com.unearby.sayhi:id/tv_eye | click=false | [0,0][0,0] | android.widget.TextView
+'Start chat' | com.unearby.sayhi:id/bt_start_chat | click=true | [0,1416][359,1436] | android.widget.TextView
+'Add to Hotlist' | com.unearby.sayhi:id/bt_add_buddy | click=true | [360,1416][720,1436] | android.widget.TextView
+=== DESCS ===
+'Navigate up' |  | click=true | [0,80][112,192]
+'Select an action' | com.unearby.sayhi:id/action_more | click=true | [608,88][720,184]
+=== CLICKABLE / IMAGE ===
+android.widget.FrameLayout | com.unearby.sayhi:id/swipe | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.LinearLayout | com.unearby.sayhi:id/action_bar_root | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.FrameLayout | android:id/content | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.FrameLayout | com.unearby.sayhi:id/layout_total | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.FrameLayout | com.unearby.sayhi:id/profile_detail | click=false | desc='' | text='' | [0,0][720,1436]
+android.widget.ScrollView | com.unearby.sayhi:id/layout_scroll | click=false | desc='' | text='' | [0,0][720,1436]
+android.view.View | com.unearby.sayhi:id/place_holder | click=false | desc='' | text='' | [0,0][720,720]
+android.widget.LinearLayout | com.unearby.sayhi:id/layout_inside_scroll | click=false | desc='' | text='' | [0,720][720,1436]
+android.widget.FrameLayout | com.unearby.sayhi:id/others_shimmer_view | click=false | desc='' | text='' | [0,724][218,763]
+android.widget.TextView | com.unearby.sayhi:id/tv_display_name | click=false | desc='' | text='Rami' | [0,724][218,763]
+android.widget.TextView | com.unearby.sayhi:id/tv_voice_show | click=true | desc='' | text='5"' | [615,726][714,798]
+android.widget.TextView | com.unearby.sayhi:id/tv_status | click=true | desc='' | text='.' | [8,798][720,834]
+android.widget.TextView | com.unearby.sayhi:id/tv_gender_age | click=false | desc='' | text='26' | [14,844][83,868]
+android.widget.ImageView | com.unearby.sayhi:id/iv_royal | click=false | desc='' | text='' | [87,840][151,872]
+android.widget.ImageView | com.unearby.sayhi:id/country_flag | click=false | desc='' | text='' | [151,840][183,872]
+android.widget.TextView | com.unearby.sayhi:id/tv_location | click=false | desc='' | text='0.01km · online' | [543,840][710,870]
+android.widget.ImageView | com.unearby.sayhi:id/splitter_0 | click=false | desc='' | text='' | [0,882][720,883]
+android.widget.TextView | com.unearby.sayhi:id/tv_id | click=true | desc='' | text='92770907' | [20,933][190,1003]
+android.widget.ImageView |  | click=false | desc='' | text='' | [359,913][360,983]
+android.widget.TextView | com.unearby.sayhi:id/tv_interest_in | click=false | desc='' | text='Female' | [380,933][474,1003]
+android.widget.LinearLayout | com.unearby.sayhi:id/layout_social_binding | click=false | desc='' | text='' | [0,1003][720,1088]
+android.widget.ImageView | com.unearby.sayhi:id/bt_twitter | click=true | desc='' | text='' | [22,1003][107,1088]
+android.widget.TextView | com.unearby.sayhi:id/tv_introduction | click=false | desc='' | text='0555 760 771' | [0,1130][214,1200]
+android.widget.ImageView | com.unearby.sayhi:id/splitter_2 | click=false | desc='' | text='' | [0,1200][720,1201]
+android.widget.TextView | com.unearby.sayhi:id/tv_height | click=false | desc='' | text='>185cm' | [20,1241][123,1311]
+android.widget.ImageView |  | click=false | desc='' | text='' | [359,1221][360,1291]
+android.widget.TextView | com.unearby.sayhi:id/tv_body_type | click=false | desc='' | text='Slim' | [380,1241][436,1311]
+android.widget.TextView | com.unearby.sayhi:id/tv_ethnicity | click=false | desc='' | text='Native American' | [20,1351][232,1421]
+android.widget.ImageView |  | click=false | desc='' | text='' | [359,1331][360,1401]
+android.widget.TextView | com.unearby.sayhi:id/tv_blood | click=false | desc='' | text='AB' | [380,1351][417,1421]
+android.widget.TextView | com.unearby.sayhi:id/tv_hair | click=false | desc='' | text='Light brown' | [0,0][0,0]
+android.widget.ImageView |  | click=false | desc='' | text='' | [0,0][0,0]
+android.widget.TextView | com.unearby.sayhi:id/tv_eye | click=false | desc='' | text='Green' | [0,0][0,0]
+androidx.appcompat.widget.LinearLayoutCompat | com.unearby.sayhi:id/profile_bottom | click=false | desc='' | text='' | [0,1416][720,1436]
+android.widget.TextView | com.unearby.sayhi:id/bt_start_chat | click=true | desc='' | text='Start chat' | [0,1416][359,1436]
+android.widget.TextView | com.unearby.sayhi:id/bt_add_buddy | click=true | desc='' | text='Add to Hotlist' | [360,1416][720,1436]
+android.widget.FrameLayout | com.unearby.sayhi:id/profile_header | click=false | desc='' | text='' | [0,0][720,720]
+androidx.recyclerview.widget.RecyclerView | com.unearby.sayhi:id/rv_photo_list | click=false | desc='' | text='' | [0,0][720,720]
+android.widget.ImageView |  | click=true | desc='' | text='' | [0,0][720,720]
+android.view.ViewGroup | com.unearby.sayhi:id/toolbar | click=false | desc='' | text='' | [0,0][720,192]
+android.widget.ImageButton |  | click=true | desc='Navigate up' | text='' | [0,80][112,192]
+android.widget.Button | com.unearby.sayhi:id/action_more | click=true | desc='Select an action' | text='' | [608,88][720,184]
+android.view.View | android:id/navigationBarBackground | click=false | desc='' | text='' | [0,0][0,0]

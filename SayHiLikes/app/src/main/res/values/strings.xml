@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SayHi Likes</string>
+    <string name="accessibility_description">Automates liking nearby people in SayHi. Only runs when you press Start.</string>
+    <string name="enable_accessibility">1. Enable Accessibility</string>
+    <string name="open_sayhi">2. Open SayHi</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="how_many">How many new likes</string>
+    <string name="active_within">Active within</string>
+    <string name="speed">Speed</string>
+    <string name="status_label">Bot status</string>
+    <string name="status_ready">Ready — press Start when SayHi is open</string>
+    <string name="status_need_access">Turn on Accessibility for SayHi Likes first</string>
+    <string name="status_running">Running… leave SayHi on screen</string>
+    <string name="liked_this_run">Liked this run</string>
+    <string name="liked_none_yet">No likes yet — names appear here after a run.</string>
+    <string name="activity_log">Activity log</string>
+    <string name="api_base_url">https://sayhi-likes-admin.vercel.app</string>
+    <string name="default_admin_telegram">OOxf5</string>
+</resources>
