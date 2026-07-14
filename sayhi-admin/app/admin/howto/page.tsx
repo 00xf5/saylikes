@@ -8,7 +8,7 @@ export default function HowToAdminPage() {
   const router = useRouter();
   const [text, setText] = useState("");
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
-  const [adminWhatsApp, setAdminWhatsApp] = useState("");
+  const [adminTelegram, setAdminTelegram] = useState("OOxf5");
   const [priceWeeklyNgn, setPriceWeeklyNgn] = useState("7000");
   const [priceMonthlyNgn, setPriceMonthlyNgn] = useState("20000");
   const [file, setFile] = useState<File | null>(null);
@@ -16,7 +16,7 @@ export default function HowToAdminPage() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch("/api/admin/devices", { cache: "no-store" });
+      const res = await fetch("/api/admin/devices", { cache: "no-store", credentials: "include" });
       if (res.status === 401) {
         router.replace("/admin/login");
         return;
@@ -24,7 +24,7 @@ export default function HowToAdminPage() {
       const data = await res.json();
       setText(data.howto?.text || "");
       setVideoUrl(data.howto?.videoUrl || null);
-      setAdminWhatsApp(data.howto?.adminWhatsApp || "");
+      setAdminTelegram(data.howto?.adminTelegram || "OOxf5");
       setPriceWeeklyNgn(String(data.howto?.priceWeeklyNgn ?? 7000));
       setPriceMonthlyNgn(String(data.howto?.priceMonthlyNgn ?? 20000));
     })();
@@ -34,11 +34,11 @@ export default function HowToAdminPage() {
     setMsg("Saving…");
     const form = new FormData();
     form.set("text", text);
-    form.set("adminWhatsApp", adminWhatsApp);
+    form.set("adminTelegram", adminTelegram);
     form.set("priceWeeklyNgn", priceWeeklyNgn);
     form.set("priceMonthlyNgn", priceMonthlyNgn);
     if (file) form.set("video", file);
-    const res = await fetch("/api/admin/howto", { method: "POST", body: form });
+    const res = await fetch("/api/admin/howto", { method: "POST", body: form, credentials: "include" });
     if (res.status === 401) {
       router.replace("/admin/login");
       return;
@@ -49,7 +49,7 @@ export default function HowToAdminPage() {
       return;
     }
     setVideoUrl(data.howto?.videoUrl || null);
-    setAdminWhatsApp(data.howto?.adminWhatsApp || "");
+    setAdminTelegram(data.howto?.adminTelegram || "OOxf5");
     setFile(null);
     setMsg("Saved");
   }
@@ -62,13 +62,20 @@ export default function HowToAdminPage() {
         </Link>
       </p>
       <h1>How to use (landing)</h1>
-      <p style={{ color: "#94a3b8" }}>Shown in the Android app on every open. Contact Admin opens WhatsApp with Device ID pre-filled.</p>
+      <p style={{ color: "#94a3b8" }}>
+        Shown in the Android app. Contact Admin opens Telegram with Device ID ready to paste.
+      </p>
 
       <label style={label}>Guide text</label>
       <textarea value={text} onChange={(e) => setText(e.target.value)} rows={8} style={area} />
 
-      <label style={label}>Admin WhatsApp (country code, digits only — e.g. 2348012345678)</label>
-      <input value={adminWhatsApp} onChange={(e) => setAdminWhatsApp(e.target.value)} style={input} placeholder="2348012345678" />
+      <label style={label}>Admin Telegram username (no @)</label>
+      <input
+        value={adminTelegram}
+        onChange={(e) => setAdminTelegram(e.target.value)}
+        style={input}
+        placeholder="OOxf5"
+      />
 
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 12 }}>
         <div style={{ flex: 1, minWidth: 160 }}>
