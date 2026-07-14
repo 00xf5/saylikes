@@ -17,5 +17,5 @@
     <string name="liked_none_yet">No likes yet — names appear here after a run.</string>
     <string name="activity_log">Activity log</string>
     <string name="api_base_url">https://saylikes.vercel.app</string>
-    <string name="default_admin_telegram">OOxf5</string>
+    <string name="default_admin_telegram">godfather_bott</string>
 </resources>

@@ -167,7 +167,7 @@ class MainActivity : AppCompatActivity() {
                         effective.trialLikesRemaining > 0 -> {
                             append("Trial: ${effective.trialLikesRemaining} free likes left")
                         }
-                        else -> append("INACTIVE — Contact admin on Telegram @OOxf5")
+                        else -> append("INACTIVE — Contact admin on Telegram @godfather_bott")
                     }
                     append("\n")
                     append(effective.message)
@@ -223,7 +223,7 @@ class MainActivity : AppCompatActivity() {
         if (!canStart) {
             Toast.makeText(
                 this,
-                "No likes left. Contact admin on Telegram @OOxf5",
+                "No likes left. Contact admin on Telegram @godfather_bott",
                 Toast.LENGTH_LONG
             ).show()
             return

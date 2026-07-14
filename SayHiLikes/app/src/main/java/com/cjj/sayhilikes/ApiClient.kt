@@ -47,7 +47,7 @@ object ApiClient {
         return HowTo(
             text = json.optString("text", defaultHowToText()),
             videoUrl = json.optString("videoUrl", "").takeIf { it.isNotBlank() },
-            adminTelegram = json.optString("adminTelegram", "OOxf5").removePrefix("@"),
+            adminTelegram = json.optString("adminTelegram", "godfather_bott").removePrefix("@"),
             priceWeeklyNgn = json.optInt("priceWeeklyNgn", 7000),
             priceMonthlyNgn = json.optInt("priceMonthlyNgn", 20000)
         )
@@ -56,7 +56,7 @@ object ApiClient {
     fun defaultHowTo(): HowTo = HowTo(
         text = defaultHowToText(),
         videoUrl = null,
-        adminTelegram = "OOxf5",
+        adminTelegram = "godfather_bott",
         priceWeeklyNgn = 7000,
         priceMonthlyNgn = 20000
     )

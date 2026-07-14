@@ -66,7 +66,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         val tg = howTo.adminTelegram.ifBlank {
             getString(R.string.default_admin_telegram)
-        }.removePrefix("@").trim().ifBlank { "OOxf5" }
+        }.removePrefix("@").trim().ifBlank { "godfather_bott" }
 
         // Prefill isn't reliable on t.me user links — copy so user can paste
         val cm = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
@@ -119,7 +119,7 @@ class OnboardingActivity : AppCompatActivity() {
                     "Contact admin (@$tg)"
                 )
             )
-            Toast.makeText(this, "Message copied. Open Telegram @OOxf5 and paste.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Message copied. Open Telegram @godfather_bott and paste.", Toast.LENGTH_LONG).show()
         } catch (_: Exception) {
             Toast.makeText(this, "Install Telegram, then message @$tg (Device ID copied)", Toast.LENGTH_LONG).show()
         }
@@ -177,7 +177,7 @@ class OnboardingActivity : AppCompatActivity() {
                 append(fmt.format(Date(it)))
             }
             if (!license.subscription) {
-                append("\n\nTap Contact Admin (Telegram @OOxf5) — Device ID is included.")
+                append("\n\nTap Contact Admin (Telegram @godfather_bott) — Device ID is included.")
             }
         }
 
