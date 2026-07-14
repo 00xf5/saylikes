@@ -28,159 +28,202 @@
 18-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:11:9-35
 19
 20    <queries>
-20-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:13:5-15:15
+20-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:13:5-30:15
 21        <package android:name="com.unearby.sayhi" />
 21-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:14:9-53
 21-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:14:18-50
-22    </queries>
-23
-24    <permission
-24-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
-25        android:name="com.cjj.sayhilikes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-25-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
-26        android:protectionLevel="signature" />
-26-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
-27
-28    <uses-permission android:name="com.cjj.sayhilikes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-28-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
-28-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
-29
-30    <application
-30-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:5-52:19
-31        android:allowBackup="true"
-31-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:18:9-35
-32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-32-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
-33        android:debuggable="true"
-34        android:extractNativeLibs="false"
-35        android:icon="@android:drawable/btn_star_big_on"
-35-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:9-57
-36        android:label="@string/app_name"
-36-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:9-41
-37        android:roundIcon="@android:drawable/btn_star_big_on"
-37-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:21:9-62
-38        android:supportsRtl="true"
-38-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:22:9-35
-39        android:theme="@style/Theme.SayHiLikes"
-39-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:23:9-48
-40        android:usesCleartextTraffic="true" >
-40-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:24:9-44
-41        <activity
-41-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:26:9-34:20
-42            android:name="com.cjj.sayhilikes.OnboardingActivity"
-42-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:27:13-47
-43            android:exported="true"
-43-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:28:13-36
-44            android:launchMode="singleTop" >
-44-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:29:13-43
-45            <intent-filter>
-45-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:30:13-33:29
-46                <action android:name="android.intent.action.MAIN" />
-46-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:31:17-69
-46-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:31:25-66
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-48-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:17-77
-48-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:27-74
-49            </intent-filter>
-50        </activity>
-51        <activity
-51-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:36:9-39:46
-52            android:name="com.cjj.sayhilikes.MainActivity"
-52-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:37:13-41
-53            android:exported="false"
-53-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:38:13-37
-54            android:launchMode="singleTop" />
-54-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:39:13-43
-55
-56        <service
-56-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:41:9-51:19
-57            android:name="com.cjj.sayhilikes.LikeAccessibilityService"
-57-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:42:13-53
-58            android:exported="false"
-58-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:43:13-37
-59            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
-59-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:44:13-79
-60            <intent-filter>
-60-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:45:13-47:29
-61                <action android:name="android.accessibilityservice.AccessibilityService" />
-61-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:17-92
-61-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:25-89
-62            </intent-filter>
-63
-64            <meta-data
-64-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:48:13-50:72
-65                android:name="android.accessibilityservice"
-65-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:49:17-60
-66                android:resource="@xml/accessibility_service_config" />
-66-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:50:17-69
-67        </service>
+22        <package android:name="org.telegram.messenger" />
+22-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:15:9-58
+22-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:15:18-55
+23        <package android:name="org.telegram.messenger.web" />
+23-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:16:9-62
+23-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:16:18-59
+24        <package android:name="org.telegram.plus" />
+24-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:9-53
+24-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:18-50
+25
+26        <intent>
+26-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:18:9-21:18
+27            <action android:name="android.intent.action.VIEW" />
+27-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:13-65
+27-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:21-62
+28
+29            <data android:scheme="tg" />
+29-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:13-41
+29-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:19-38
+30        </intent>
+31        <intent>
+31-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:22:9-25:18
+32            <action android:name="android.intent.action.VIEW" />
+32-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:13-65
+32-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:21-62
+33
+34            <data
+34-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:13-41
+35                android:host="t.me"
+35-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:24:42-61
+36                android:scheme="https" />
+36-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:19-38
+37        </intent>
+38        <intent>
+38-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:26:9-29:18
+39            <action android:name="android.intent.action.SEND" />
+39-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:27:13-65
+39-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:27:21-62
+40
+41            <data android:mimeType="text/plain" />
+41-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:13-41
+41-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:28:19-48
+42        </intent>
+43    </queries>
+44
+45    <permission
+45-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+46        android:name="com.cjj.sayhilikes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+46-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+47        android:protectionLevel="signature" />
+47-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+48
+49    <uses-permission android:name="com.cjj.sayhilikes.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+49-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+49-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+50
+51    <application
+51-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:5-67:19
+52        android:allowBackup="true"
+52-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:33:9-35
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+54        android:debuggable="true"
+55        android:extractNativeLibs="false"
+56        android:icon="@android:drawable/btn_star_big_on"
+56-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:34:9-57
+57        android:label="@string/app_name"
+57-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:35:9-41
+58        android:roundIcon="@android:drawable/btn_star_big_on"
+58-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:36:9-62
+59        android:supportsRtl="true"
+59-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:37:9-35
+60        android:theme="@style/Theme.SayHiLikes"
+60-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:38:9-48
+61        android:usesCleartextTraffic="true" >
+61-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:39:9-44
+62        <activity
+62-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:41:9-49:20
+63            android:name="com.cjj.sayhilikes.OnboardingActivity"
+63-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:42:13-47
+64            android:exported="true"
+64-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:43:13-36
+65            android:launchMode="singleTop" >
+65-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:44:13-43
+66            <intent-filter>
+66-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:45:13-48:29
+67                <action android:name="android.intent.action.MAIN" />
+67-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:17-69
+67-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:25-66
 68
-69        <provider
-69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-70            android:name="androidx.startup.InitializationProvider"
-70-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-71            android:authorities="com.cjj.sayhilikes.androidx-startup"
-71-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-72            android:exported="false" >
-72-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-73            <meta-data
-73-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-74-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-75                android:value="androidx.startup" />
-75-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-76            <meta-data
-76-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\36c498859f8ef032ab3bccbc4ca6ea99\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-77-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\36c498859f8ef032ab3bccbc4ca6ea99\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-78                android:value="androidx.startup" />
-78-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\36c498859f8ef032ab3bccbc4ca6ea99\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-79            <meta-data
-79-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-81                android:value="androidx.startup" />
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-82        </provider>
-83
-84        <receiver
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-85            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-86            android:directBootAware="false"
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-87            android:enabled="true"
-87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
-88            android:exported="true"
-88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-89            android:permission="android.permission.DUMP" >
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-90            <intent-filter>
-90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-91                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-92            </intent-filter>
-93            <intent-filter>
-93-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-94                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-95            </intent-filter>
-96            <intent-filter>
-96-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-97                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-98            </intent-filter>
-99            <intent-filter>
-99-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-100                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
-101            </intent-filter>
-102        </receiver>
-103    </application>
+69                <category android:name="android.intent.category.LAUNCHER" />
+69-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:47:17-77
+69-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:47:27-74
+70            </intent-filter>
+71        </activity>
+72        <activity
+72-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:51:9-54:46
+73            android:name="com.cjj.sayhilikes.MainActivity"
+73-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:52:13-41
+74            android:exported="false"
+74-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:53:13-37
+75            android:launchMode="singleTop" />
+75-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:54:13-43
+76
+77        <service
+77-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:56:9-66:19
+78            android:name="com.cjj.sayhilikes.LikeAccessibilityService"
+78-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:57:13-53
+79            android:exported="false"
+79-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:58:13-37
+80            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+80-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:59:13-79
+81            <intent-filter>
+81-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:60:13-62:29
+82                <action android:name="android.accessibilityservice.AccessibilityService" />
+82-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:61:17-92
+82-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:61:25-89
+83            </intent-filter>
+84
+85            <meta-data
+85-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:63:13-65:72
+86                android:name="android.accessibilityservice"
+86-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:64:17-60
+87                android:resource="@xml/accessibility_service_config" />
+87-->C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:65:17-69
+88        </service>
+89
+90        <provider
+90-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+91            android:name="androidx.startup.InitializationProvider"
+91-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+92            android:authorities="com.cjj.sayhilikes.androidx-startup"
+92-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+93            android:exported="false" >
+93-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+94            <meta-data
+94-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+95-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+96                android:value="androidx.startup" />
+96-->[androidx.emoji2:emoji2:1.3.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\268b965e38ac6c3d7965eb62437bdecd\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+97            <meta-data
+97-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\36c498859f8ef032ab3bccbc4ca6ea99\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+98                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+98-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\36c498859f8ef032ab3bccbc4ca6ea99\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+99                android:value="androidx.startup" />
+99-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\36c498859f8ef032ab3bccbc4ca6ea99\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+100            <meta-data
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+101                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+102                android:value="androidx.startup" />
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+103        </provider>
 104
-105</manifest>
+105        <receiver
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+106            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+107            android:directBootAware="false"
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+108            android:enabled="true"
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+109            android:exported="true"
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+110            android:permission="android.permission.DUMP" >
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+112                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+113            </intent-filter>
+114            <intent-filter>
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+115                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+116            </intent-filter>
+117            <intent-filter>
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+118                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+119            </intent-filter>
+120            <intent-filter>
+120-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+121                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\19a04c9820552e8deab86a79cc2427e8\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+122            </intent-filter>
+123        </receiver>
+124    </application>
+125
+126</manifest>

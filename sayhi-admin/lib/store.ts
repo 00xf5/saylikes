@@ -122,8 +122,7 @@ async function writeBlob(store: Store) {
     access: "public",
     token,
     contentType: "application/json",
-    addRandomSuffix: false,
-    allowOverwrite: true
+    addRandomSuffix: false
   });
 }
 

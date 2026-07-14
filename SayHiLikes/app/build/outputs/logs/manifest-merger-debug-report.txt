@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-53:12
-INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:2:1-68:12
 MERGED from [androidx.databinding:viewbinding:8.7.3] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\1bb738773ec3c9e51c643605a92ac6aa\transformed\viewbinding-8.7.3\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\71cd2808239bde278ecaa4add28b95d8\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\54ce316567198cf2ae3c58f6bd53dbd6\transformed\constraintlayout-2.2.0\AndroidManifest.xml:2:1-9:12
@@ -75,14 +75,48 @@ ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:10:9-64
 queries
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:13:5-15:15
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:13:5-30:15
 package#com.unearby.sayhi
 ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:14:9-53
 	android:name
 		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:14:18-50
+package#org.telegram.messenger
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:15:9-58
+	android:name
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:15:18-55
+package#org.telegram.messenger.web
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:16:9-62
+	android:name
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:16:18-59
+package#org.telegram.plus
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:9-53
+	android:name
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:18-50
+intent#action:name:android.intent.action.VIEW+data:scheme:tg
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:18:9-21:18
+action#android.intent.action.VIEW
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:21-62
+data
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:13-41
+	android:host
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:24:42-61
+	android:scheme
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:19-38
+	android:mimeType
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:28:19-48
+intent#action:name:android.intent.action.VIEW+data:host:t.me+data:scheme:https
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:22:9-25:18
+intent#action:name:android.intent.action.SEND+data:mimeType:text/plain
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:26:9-29:18
+action#android.intent.action.SEND
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:27:13-65
+	android:name
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:27:21-62
 application
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:5-52:19
-INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:17:5-52:19
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:5-67:19
+INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:5-67:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\71cd2808239bde278ecaa4add28b95d8\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\71cd2808239bde278ecaa4add28b95d8\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\54ce316567198cf2ae3c58f6bd53dbd6\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -104,65 +138,65 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\sh
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] C:\Users\shiver\AppData\Local\Temp\cursor-sandbox-cache\6c5f94181f5d3d7b507be52c730cfac3\gradle\caches\8.9\transforms\3e85dc3a27e7bbf172ac49206d18ddee\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:22:9-35
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:37:9-35
 	android:label
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:35:9-41
 	android:roundIcon
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:21:9-62
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:36:9-62
 	android:icon
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:19:9-57
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:34:9-57
 	android:allowBackup
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:33:9-35
 	android:theme
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:23:9-48
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:38:9-48
 	android:usesCleartextTraffic
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:24:9-44
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:39:9-44
 activity#com.cjj.sayhilikes.OnboardingActivity
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:41:9-49:20
 	android:launchMode
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:29:13-43
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:44:13-43
 	android:exported
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:28:13-36
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:27:13-47
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:42:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:30:13-33:29
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:45:13-48:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:17-77
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:47:27-74
 activity#com.cjj.sayhilikes.MainActivity
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:36:9-39:46
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:51:9-54:46
 	android:launchMode
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:39:13-43
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:54:13-43
 	android:exported
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:37:13-41
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:52:13-41
 service#com.cjj.sayhilikes.LikeAccessibilityService
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:41:9-51:19
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:56:9-66:19
 	android:exported
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:43:13-37
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:58:13-37
 	android:permission
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:44:13-79
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:59:13-79
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:42:13-53
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:57:13-53
 intent-filter#action:name:android.accessibilityservice.AccessibilityService
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:45:13-47:29
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:60:13-62:29
 action#android.accessibilityservice.AccessibilityService
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:17-92
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:61:17-92
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:46:25-89
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:61:25-89
 meta-data#android.accessibilityservice
-ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:48:13-50:72
+ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:63:13-65:72
 	android:resource
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:50:17-69
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:65:17-69
 	android:name
-		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:49:17-60
+		ADDED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml:64:17-60
 uses-sdk
 INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\shiver\Desktop\cjj\SayHiLikes\app\src\main\AndroidManifest.xml
