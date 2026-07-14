@@ -14,6 +14,10 @@ export type Device = {
   lastSeenAt: number;
   /** Free likes left for testing / trial. Paid sub ignores this. */
   trialLikesRemaining: number;
+  /** Admin hard block — stops paid + trial until cleared. */
+  blocked: boolean;
+  /** Temporary suspension end (epoch ms). Null = not timed. */
+  suspendedUntil: number | null;
 };
 
 export type HowTo = {
@@ -60,7 +64,9 @@ function normalizeDevice(d: Partial<Device> & { uuid: string }): Device {
     expiresAt: d.expiresAt ?? null,
     lastSeenAt: d.lastSeenAt ?? Date.now(),
     trialLikesRemaining:
-      typeof d.trialLikesRemaining === "number" ? d.trialLikesRemaining : TRIAL_LIKES
+      typeof d.trialLikesRemaining === "number" ? d.trialLikesRemaining : TRIAL_LIKES,
+    blocked: d.blocked === true,
+    suspendedUntil: typeof d.suspendedUntil === "number" ? d.suspendedUntil : null
   };
 }
 
@@ -162,6 +168,17 @@ function hasPaidSub(device: Device): boolean {
   return true;
 }
 
+function isBlockedNow(device: Device): { blocked: boolean; message: string } {
+  if (device.blocked) {
+    return { blocked: true, message: "Suspended by admin — contact support" };
+  }
+  if (device.suspendedUntil != null && device.suspendedUntil > Date.now()) {
+    const until = new Date(device.suspendedUntil).toLocaleString();
+    return { blocked: true, message: `Suspended until ${until}` };
+  }
+  return { blocked: false, message: "" };
+}
+
 export function licenseOf(device: Device | undefined) {
   if (!device) {
     return {
@@ -169,30 +186,53 @@ export function licenseOf(device: Device | undefined) {
       expiresAt: null as number | null,
       trialLikesRemaining: 0,
       subscription: false,
+      blocked: false,
+      suspendedUntil: null as number | null,
       message: "Unknown device — open the app once to register"
     };
   }
+
+  const hold = isBlockedNow(device);
+  if (hold.blocked) {
+    return {
+      active: false,
+      expiresAt: device.expiresAt,
+      trialLikesRemaining: Math.max(0, device.trialLikesRemaining ?? 0),
+      subscription: false,
+      blocked: true,
+      suspendedUntil: device.suspendedUntil,
+      message: hold.message
+    };
+  }
+
+  // Timed suspension expired — clear for cleanliness on next read
+  if (device.suspendedUntil != null && device.suspendedUntil <= Date.now()) {
+    device.suspendedUntil = null;
+  }
+
   const trial = Math.max(0, device.trialLikesRemaining ?? 0);
   const subscription = hasPaidSub(device);
 
-  // Paid subscription (active flag + valid expiry)
   if (subscription) {
     return {
       active: true,
       expiresAt: device.expiresAt,
       trialLikesRemaining: trial,
       subscription: true,
+      blocked: false,
+      suspendedUntil: null,
       message: device.expiresAt == null ? "Active (unlimited)" : "Active subscription"
     };
   }
 
-  // Free trial (devices register with active=false until paid)
   if (trial > 0) {
     return {
       active: true,
       expiresAt: null,
       trialLikesRemaining: trial,
       subscription: false,
+      blocked: false,
+      suspendedUntil: null,
       message: `Trial: ${trial} free like${trial === 1 ? "" : "s"} left`
     };
   }
@@ -203,6 +243,8 @@ export function licenseOf(device: Device | undefined) {
       expiresAt: device.expiresAt,
       trialLikesRemaining: 0,
       subscription: false,
+      blocked: false,
+      suspendedUntil: null,
       message: "Subscription expired — contact admin on Telegram"
     };
   }
@@ -212,6 +254,8 @@ export function licenseOf(device: Device | undefined) {
     expiresAt: device.expiresAt,
     trialLikesRemaining: 0,
     subscription: false,
+    blocked: false,
+    suspendedUntil: null,
     message: "No free likes left — contact admin on Telegram @OOxf5"
   };
 }
