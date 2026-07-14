@@ -48,6 +48,16 @@ export default function AdminPage() {
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [manualUuid, setManualUuid] = useState("");
   const [loaded, setLoaded] = useState(false);
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+
+  function toggleDevice(uuid: string) {
+    setExpanded((s) => ({ ...s, [uuid]: !s[uuid] }));
+  }
+
+  function shortUuid(uuid: string) {
+    if (uuid.length <= 16) return uuid;
+    return `${uuid.slice(0, 8)}…${uuid.slice(-6)}`;
+  }
 
   async function load() {
     const res = await fetch("/api/admin/devices", { cache: "no-store", credentials: "include" });
@@ -103,6 +113,7 @@ export default function AdminPage() {
       return;
     }
     setOkMsg(`${success}: ${uuid.slice(0, 8)}…`);
+    setExpanded((s) => ({ ...s, [uuid]: true }));
     await load();
   }
 
@@ -230,6 +241,7 @@ export default function AdminPage() {
             {filtered.map((d) => {
               const st = statusOf(d);
               const trial = d.trialLikesRemaining ?? 0;
+              const isOpen = !!expanded[d.uuid];
               const pillClass =
                 st.kind === "ok"
                   ? "pill-ok"
@@ -238,34 +250,55 @@ export default function AdminPage() {
                     : st.kind === "warn" || st.kind === "bad"
                       ? "pill-off"
                       : "pill-off";
+              const note = notes[d.uuid] || d.note || "";
               return (
-                <div key={d.uuid} className="device-card panel" style={{ padding: 14 }}>
-                  <div className="row" style={{ marginBottom: 8 }}>
-                    <code>{d.uuid}</code>
-                    <span className={`pill ${pillClass}`}>{st.label}</span>
-                    {trial > 0 && st.kind !== "bad" && st.kind !== "warn" && (
-                      <span className="pill pill-trial">{trial} trial left</span>
-                    )}
-                  </div>
-                  <div className="muted">
-                    Last seen {fmt(d.lastSeenAt)} · Sub expires {fmt(d.expiresAt)}
-                    {d.suspendedUntil && d.suspendedUntil > Date.now()
-                      ? ` · Suspended until ${fmt(d.suspendedUntil)}`
-                      : ""}
-                  </div>
+                <div key={d.uuid} className={`device-accordion${isOpen ? " open" : ""}`}>
+                  <button
+                    type="button"
+                    className="device-accordion-header"
+                    onClick={() => toggleDevice(d.uuid)}
+                    aria-expanded={isOpen}
+                  >
+                    <div className="device-accordion-main">
+                      <div className="device-accordion-title">
+                        <code title={d.uuid}>{shortUuid(d.uuid)}</code>
+                        <span className={`pill ${pillClass}`}>{st.label}</span>
+                        {trial > 0 && st.kind !== "bad" && st.kind !== "warn" && (
+                          <span className="pill pill-trial">{trial} trial</span>
+                        )}
+                      </div>
+                      <div className="device-accordion-meta">
+                        {note ? `${note} · ` : ""}
+                        Last seen {fmt(d.lastSeenAt)}
+                        {d.suspendedUntil && d.suspendedUntil > Date.now()
+                          ? ` · Suspended until ${fmt(d.suspendedUntil)}`
+                          : ""}
+                      </div>
+                    </div>
+                    <span className="device-accordion-chevron" aria-hidden>
+                      ▼
+                    </span>
+                  </button>
 
-                  <input
-                    className="field"
-                    style={{ marginTop: 10 }}
-                    value={notes[d.uuid] || ""}
-                    onChange={(e) => setNotes((s) => ({ ...s, [d.uuid]: e.target.value }))}
-                    placeholder="Note (customer name / payment)"
-                  />
+                  <div className="device-accordion-body">
+                    <p className="muted" style={{ margin: "12px 0 6px", wordBreak: "break-all" }}>
+                      <code>{d.uuid}</code>
+                    </p>
+                    <div className="muted" style={{ marginBottom: 10 }}>
+                      Sub expires {fmt(d.expiresAt)} · Created {fmt(d.createdAt)}
+                    </div>
+
+                    <input
+                      className="field"
+                      value={notes[d.uuid] || ""}
+                      onChange={(e) => setNotes((s) => ({ ...s, [d.uuid]: e.target.value }))}
+                      placeholder="Note (customer name / payment)"
+                    />
 
                   <p className="muted" style={{ margin: "12px 0 6px", fontWeight: 600 }}>
                     Subscription
                   </p>
-                  <div className="row">
+                  <div className="row-actions">
                     <input
                       className="field"
                       style={{ width: 80 }}
@@ -339,7 +372,7 @@ export default function AdminPage() {
                   <p className="muted" style={{ margin: "14px 0 6px", fontWeight: 600 }}>
                     Suspend / block
                   </p>
-                  <div className="row">
+                  <div className="row-actions">
                     <input
                       className="field"
                       style={{ width: 80 }}
@@ -398,6 +431,7 @@ export default function AdminPage() {
                     >
                       Delete
                     </button>
+                  </div>
                   </div>
                 </div>
               );
