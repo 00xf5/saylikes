@@ -16,6 +16,11 @@ function applyFields(
     store.howto.adminWhatsApp = wa.replace(/[^\d]/g, "");
   }
 
+  const tg = fields.adminTelegram;
+  if (typeof tg === "string") {
+    store.howto.adminTelegram = tg.replace(/^@/, "").trim() || store.howto.adminTelegram;
+  }
+
   const weekly = fields.priceWeeklyNgn;
   if (typeof weekly === "string" && weekly.trim()) {
     store.howto.priceWeeklyNgn = Number(weekly) || store.howto.priceWeeklyNgn;
@@ -56,6 +61,7 @@ export async function POST(req: Request) {
   applyFields(store, {
     text: form.get("text") ?? undefined,
     adminWhatsApp: form.get("adminWhatsApp") ?? undefined,
+    adminTelegram: form.get("adminTelegram") ?? undefined,
     priceWeeklyNgn: form.get("priceWeeklyNgn") ?? undefined,
     priceMonthlyNgn: form.get("priceMonthlyNgn") ?? undefined
   });

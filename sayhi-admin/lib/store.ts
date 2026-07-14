@@ -204,17 +204,6 @@ export function consumeTrial(device: Device, count: number): Device {
   return device;
 }
 
-export function assertAdmin(req: Request) {
-  const token = process.env.ADMIN_TOKEN || "";
-  const header = req.headers.get("x-admin-token") || "";
-  const cookie = req.headers.get("cookie") || "";
-  const cookieToken = cookie
-    .split(";")
-    .map((c) => c.trim())
-    .find((c) => c.startsWith("admin_token="))
-    ?.slice("admin_token=".length);
-  const provided = header || cookieToken || "";
-  if (!token || provided !== token) {
-    throw new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401 });
-  }
-}
+// Re-export so existing API routes keep working
+export { assertAdmin } from "@/lib/auth";
+
