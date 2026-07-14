@@ -66,26 +66,62 @@ class OnboardingActivity : AppCompatActivity() {
 
         val tg = howTo.adminTelegram.ifBlank {
             getString(R.string.default_admin_telegram)
-        }.removePrefix("@").trim()
+        }.removePrefix("@").trim().ifBlank { "OOxf5" }
 
-        if (tg.isBlank()) {
-            val share = Intent(Intent.ACTION_SEND).apply {
-                type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, msg)
-            }
-            startActivity(Intent.createChooser(share, "Contact admin"))
-            return
+        // Prefill isn't reliable on t.me user links — copy so user can paste
+        val cm = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+        cm.setPrimaryClip(ClipData.newPlainText("sayhi-admin", msg))
+
+        val candidates = mutableListOf<Intent>()
+
+        // Native Telegram deep link (opens chat with @user)
+        candidates += Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=$tg")).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
 
-        val url = "https://t.me/$tg?text=${Uri.encode(msg)}"
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-        } catch (_: Exception) {
-            val share = Intent(Intent.ACTION_SEND).apply {
+        // Share draft into installed Telegram apps
+        for (pkg in listOf(
+            "org.telegram.messenger",
+            "org.telegram.messenger.web",
+            "org.telegram.plus"
+        )) {
+            candidates += Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, msg)
+                setPackage(pkg)
             }
-            startActivity(Intent.createChooser(share, "Contact admin"))
+        }
+
+        // Public https link (no ?text= — that often fails to open)
+        candidates += Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/$tg")).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+
+        for (intent in candidates) {
+            try {
+                if (intent.resolveActivity(packageManager) != null) {
+                    startActivity(intent)
+                    Toast.makeText(this, "Message copied — paste in Telegram if needed", Toast.LENGTH_LONG).show()
+                    return
+                }
+            } catch (_: Exception) {
+            }
+        }
+
+        // Last resort: any share target / browser
+        try {
+            startActivity(
+                Intent.createChooser(
+                    Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_TEXT, msg)
+                    },
+                    "Contact admin (@$tg)"
+                )
+            )
+            Toast.makeText(this, "Message copied. Open Telegram @OOxf5 and paste.", Toast.LENGTH_LONG).show()
+        } catch (_: Exception) {
+            Toast.makeText(this, "Install Telegram, then message @$tg (Device ID copied)", Toast.LENGTH_LONG).show()
         }
     }
 
