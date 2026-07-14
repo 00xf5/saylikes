@@ -22,7 +22,9 @@ export async function POST(req: Request) {
         note: "",
         active: false,
         expiresAt: null,
-        trialLikesRemaining: TRIAL_LIKES
+        trialLikesRemaining: TRIAL_LIKES,
+        blocked: false,
+        suspendedUntil: null
       };
     } else {
       existing.lastSeenAt = now;

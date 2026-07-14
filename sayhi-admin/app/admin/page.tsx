@@ -12,6 +12,8 @@ type Device = {
   createdAt: number;
   lastSeenAt: number;
   trialLikesRemaining?: number;
+  blocked?: boolean;
+  suspendedUntil?: number | null;
 };
 
 type StorageInfo = { mode: string; ok: boolean; hint: string };
@@ -21,14 +23,28 @@ function fmt(ts: number | null | undefined) {
   return new Date(ts).toLocaleString();
 }
 
+function statusOf(d: Device) {
+  const now = Date.now();
+  if (d.blocked) return { label: "BLOCKED", kind: "bad" as const };
+  if (d.suspendedUntil && d.suspendedUntil > now) {
+    return { label: "SUSPENDED", kind: "warn" as const };
+  }
+  const expired = d.expiresAt != null && d.expiresAt < now;
+  if (d.active && !expired) return { label: "PAID", kind: "ok" as const };
+  if ((d.trialLikesRemaining ?? 0) > 0) return { label: "TRIAL", kind: "trial" as const };
+  return { label: "INACTIVE", kind: "off" as const };
+}
+
 export default function AdminPage() {
   const router = useRouter();
   const [devices, setDevices] = useState<Device[]>([]);
   const [storage, setStorage] = useState<StorageInfo | null>(null);
   const [error, setError] = useState("");
+  const [okMsg, setOkMsg] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [q, setQ] = useState("");
   const [days, setDays] = useState<Record<string, string>>({});
+  const [suspendDays, setSuspendDays] = useState<Record<string, string>>({});
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [manualUuid, setManualUuid] = useState("");
   const [loaded, setLoaded] = useState(false);
@@ -66,9 +82,10 @@ export default function AdminPage() {
     );
   }, [devices, q]);
 
-  async function patch(uuid: string, body: Record<string, unknown>) {
+  async function patch(uuid: string, body: Record<string, unknown>, success = "Saved") {
     setBusy(uuid);
     setError("");
+    setOkMsg("");
     const res = await fetch("/api/admin/device", {
       method: "PATCH",
       credentials: "include",
@@ -80,23 +97,31 @@ export default function AdminPage() {
       router.replace("/admin/login");
       return;
     }
+    const data = await res.json().catch(() => ({}));
     if (!res.ok) {
-      const data = await res.json().catch(() => ({}));
       setError(data.error || "Update failed — is Blob connected?");
       return;
     }
+    setOkMsg(`${success}: ${uuid.slice(0, 8)}…`);
     await load();
   }
 
   async function remove(uuid: string) {
-    if (!confirm(`Delete ${uuid}?`)) return;
+    if (!confirm(`Permanently delete ${uuid}?`)) return;
     setBusy(uuid);
+    setError("");
     const res = await fetch(`/api/admin/device?uuid=${encodeURIComponent(uuid)}`, {
       method: "DELETE",
       credentials: "include"
     });
     setBusy(null);
-    if (res.ok) await load();
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      setError(data.error || "Delete failed");
+      return;
+    }
+    setOkMsg("Deleted");
+    await load();
   }
 
   async function addManual() {
@@ -105,10 +130,15 @@ export default function AdminPage() {
       setError("Paste the full Device ID from the phone app");
       return;
     }
-    await patch(uuid, {
-      note: notes[uuid] || "Added from admin",
-      setDaysFromNow: Number(days["_new"] || 7)
-    });
+    await patch(
+      uuid,
+      {
+        note: notes[uuid] || "Added from admin",
+        setDaysFromNow: Number(days["_new"] || 7),
+        unblock: true
+      },
+      "Activated"
+    );
     setManualUuid("");
   }
 
@@ -132,7 +162,7 @@ export default function AdminPage() {
           <div className="admin-brand-mark">SH</div>
           <div>
             <h1 className="admin-title">Devices</h1>
-            <p className="admin-sub">{devices.length} registered · manage subscriptions by UUID</p>
+            <p className="admin-sub">{devices.length} registered · manage by Device ID</p>
           </div>
         </div>
         <div className="admin-actions">
@@ -154,14 +184,7 @@ export default function AdminPage() {
         </div>
       )}
 
-      {devices.length === 0 && storage?.ok && (
-        <div className="banner banner-warn">
-          No devices yet. On the phone: open <strong>SayHi Likes</strong> (updated APK pointing to
-          saylikes.vercel.app). Copy the Device ID, or it will appear here after register. You can
-          also paste it below and activate immediately.
-        </div>
-      )}
-
+      {okMsg && <div className="banner banner-ok">{okMsg}</div>}
       {error && <div className="banner banner-bad">{error}</div>}
 
       <section className="panel" style={{ marginBottom: 14 }}>
@@ -197,7 +220,7 @@ export default function AdminPage() {
         />
       </div>
 
-      <section className="panel" style={{ overflowX: "auto" }}>
+      <section className="panel">
         {filtered.length === 0 ? (
           <p className="muted" style={{ margin: 0 }}>
             Nothing to show.
@@ -205,21 +228,32 @@ export default function AdminPage() {
         ) : (
           <div className="device-grid">
             {filtered.map((d) => {
-              const expired = d.expiresAt != null && d.expiresAt < Date.now();
-              const paid = d.active && !expired;
+              const st = statusOf(d);
               const trial = d.trialLikesRemaining ?? 0;
+              const pillClass =
+                st.kind === "ok"
+                  ? "pill-ok"
+                  : st.kind === "trial"
+                    ? "pill-trial"
+                    : st.kind === "warn" || st.kind === "bad"
+                      ? "pill-off"
+                      : "pill-off";
               return (
                 <div key={d.uuid} className="device-card panel" style={{ padding: 14 }}>
                   <div className="row" style={{ marginBottom: 8 }}>
                     <code>{d.uuid}</code>
-                    <span className={`pill ${paid ? "pill-ok" : "pill-off"}`}>
-                      {paid ? "PAID" : "UNPAID"}
-                    </span>
-                    {trial > 0 && <span className="pill pill-trial">TRIAL {trial}</span>}
+                    <span className={`pill ${pillClass}`}>{st.label}</span>
+                    {trial > 0 && st.kind !== "bad" && st.kind !== "warn" && (
+                      <span className="pill pill-trial">{trial} trial left</span>
+                    )}
                   </div>
                   <div className="muted">
-                    Last seen {fmt(d.lastSeenAt)} · Expires {fmt(d.expiresAt)}
+                    Last seen {fmt(d.lastSeenAt)} · Sub expires {fmt(d.expiresAt)}
+                    {d.suspendedUntil && d.suspendedUntil > Date.now()
+                      ? ` · Suspended until ${fmt(d.suspendedUntil)}`
+                      : ""}
                   </div>
+
                   <input
                     className="field"
                     style={{ marginTop: 10 }}
@@ -227,7 +261,11 @@ export default function AdminPage() {
                     onChange={(e) => setNotes((s) => ({ ...s, [d.uuid]: e.target.value }))}
                     placeholder="Note (customer name / payment)"
                   />
-                  <div className="row" style={{ marginTop: 10 }}>
+
+                  <p className="muted" style={{ margin: "12px 0 6px", fontWeight: 600 }}>
+                    Subscription
+                  </p>
+                  <div className="row">
                     <input
                       className="field"
                       style={{ width: 80 }}
@@ -239,10 +277,15 @@ export default function AdminPage() {
                       className="btn"
                       disabled={busy === d.uuid}
                       onClick={() =>
-                        patch(d.uuid, {
-                          setDaysFromNow: Number(days[d.uuid] || 30),
-                          note: notes[d.uuid] || ""
-                        })
+                        patch(
+                          d.uuid,
+                          {
+                            setDaysFromNow: Number(days[d.uuid] || 30),
+                            note: notes[d.uuid] || "",
+                            unblock: true
+                          },
+                          "Set days"
+                        )
                       }
                     >
                       Set days
@@ -251,10 +294,15 @@ export default function AdminPage() {
                       className="btn"
                       disabled={busy === d.uuid}
                       onClick={() =>
-                        patch(d.uuid, {
-                          extendDays: Number(days[d.uuid] || 30),
-                          note: notes[d.uuid] || ""
-                        })
+                        patch(
+                          d.uuid,
+                          {
+                            extendDays: Number(days[d.uuid] || 30),
+                            note: notes[d.uuid] || "",
+                            unblock: true
+                          },
+                          "Extended"
+                        )
                       }
                     >
                       Extend
@@ -263,11 +311,16 @@ export default function AdminPage() {
                       className="btn"
                       disabled={busy === d.uuid}
                       onClick={() =>
-                        patch(d.uuid, {
-                          active: true,
-                          expiresAt: null,
-                          note: notes[d.uuid] || ""
-                        })
+                        patch(
+                          d.uuid,
+                          {
+                            active: true,
+                            expiresAt: null,
+                            note: notes[d.uuid] || "",
+                            unblock: true
+                          },
+                          "Unlimited"
+                        )
                       }
                     >
                       Unlimited
@@ -275,16 +328,68 @@ export default function AdminPage() {
                     <button
                       className="btn btn-ghost"
                       disabled={busy === d.uuid}
-                      onClick={() => patch(d.uuid, { note: notes[d.uuid] || "" })}
+                      onClick={() =>
+                        patch(d.uuid, { note: notes[d.uuid] || "" }, "Note saved")
+                      }
                     >
                       Save note
+                    </button>
+                  </div>
+
+                  <p className="muted" style={{ margin: "14px 0 6px", fontWeight: 600 }}>
+                    Suspend / block
+                  </p>
+                  <div className="row">
+                    <input
+                      className="field"
+                      style={{ width: 80 }}
+                      placeholder="days"
+                      value={suspendDays[d.uuid] || "3"}
+                      onChange={(e) =>
+                        setSuspendDays((s) => ({ ...s, [d.uuid]: e.target.value }))
+                      }
+                    />
+                    <button
+                      className="btn btn-ghost"
+                      disabled={busy === d.uuid}
+                      onClick={() =>
+                        patch(
+                          d.uuid,
+                          {
+                            suspendDays: Number(suspendDays[d.uuid] || 3),
+                            note: notes[d.uuid] || ""
+                          },
+                          "Suspended"
+                        )
+                      }
+                    >
+                      Suspend N days
                     </button>
                     <button
                       className="btn btn-ghost"
                       disabled={busy === d.uuid}
-                      onClick={() => patch(d.uuid, { active: false, note: notes[d.uuid] || "" })}
+                      onClick={() =>
+                        patch(
+                          d.uuid,
+                          { blocked: true, note: notes[d.uuid] || "" },
+                          "Blocked"
+                        )
+                      }
                     >
-                      Disable
+                      Block now
+                    </button>
+                    <button
+                      className="btn"
+                      disabled={busy === d.uuid}
+                      onClick={() =>
+                        patch(
+                          d.uuid,
+                          { unblock: true, note: notes[d.uuid] || "" },
+                          "Unblocked"
+                        )
+                      }
+                    >
+                      Unblock
                     </button>
                     <button
                       className="btn btn-danger"
