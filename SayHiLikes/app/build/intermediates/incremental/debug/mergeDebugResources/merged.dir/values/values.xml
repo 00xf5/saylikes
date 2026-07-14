@@ -1980,7 +1980,7 @@
     <string name="active_within">Active within</string>
     <string name="activity_log">Activity log</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="api_base_url">https://sayhi-likes-admin.vercel.app</string>
+    <string name="api_base_url">https://saylikes.vercel.app</string>
     <string name="app_name">SayHi Likes</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>

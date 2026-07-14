@@ -44,7 +44,12 @@ export async function PATCH(req: Request) {
     device.active = true;
   }
   device.updatedAt = now;
-  await saveStore(store);
+  try {
+    await saveStore(store);
+  } catch (e) {
+    const message = e instanceof Error ? e.message : "Save failed";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
   return NextResponse.json({ ok: true, device });
 }
 

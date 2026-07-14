@@ -133,7 +133,27 @@ export async function getStore(): Promise<Store> {
 
 export async function saveStore(store: Store): Promise<void> {
   if (process.env.BLOB_READ_WRITE_TOKEN) return writeBlob(store);
+  // On Vercel, local disk is ephemeral — writes vanish between requests
+  if (process.env.VERCEL) {
+    throw new Error(
+      "BLOB_READ_WRITE_TOKEN is missing on Vercel. Connect Blob Storage and redeploy, or devices will never persist."
+    );
+  }
   return writeLocal(store);
+}
+
+export function storageMode(): { mode: "blob" | "ephemeral"; ok: boolean; hint: string } {
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    return { mode: "blob", ok: true, hint: "Vercel Blob connected — devices persist." };
+  }
+  if (process.env.VERCEL) {
+    return {
+      mode: "ephemeral",
+      ok: false,
+      hint: "No Blob token on this deploy. Devices will NOT save. Vercel → Storage → Blob → connect → redeploy."
+    };
+  }
+  return { mode: "ephemeral", ok: true, hint: "Local file store (dev only)." };
 }
 
 function hasPaidSub(device: Device): boolean {

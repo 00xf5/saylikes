@@ -3,7 +3,7 @@
     <string name="accessibility_description">Automates liking nearby people in SayHi. Only runs when you press Start.</string>
     <string name="active_within">Active within</string>
     <string name="activity_log">Activity log</string>
-    <string name="api_base_url">https://sayhi-likes-admin.vercel.app</string>
+    <string name="api_base_url">https://saylikes.vercel.app</string>
     <string name="app_name">SayHi Likes</string>
     <string name="default_admin_telegram">OOxf5</string>
     <string name="enable_accessibility">1. Enable Accessibility</string>
