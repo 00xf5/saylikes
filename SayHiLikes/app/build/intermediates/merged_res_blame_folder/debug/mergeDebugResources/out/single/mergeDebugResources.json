@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-debug-32:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-main-34:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-debug-32:\\color_radio_black.xml.flat",
+        "source": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-main-34:\\color\\radio_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-debug-32:\\xml_accessibility_service_config.xml.flat",
+        "source": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-main-34:\\xml\\accessibility_service_config.xml"
+    },
+    {
+        "merged": "com.cjj.sayhilikes.app-debug-32:/layout_spinner_dropdown_item.xml.flat",
+        "source": "com.cjj.sayhilikes.app-main-34:/layout/spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "com.cjj.sayhilikes.app-debug-32:/layout_spinner_item.xml.flat",
+        "source": "com.cjj.sayhilikes.app-main-34:/layout/spinner_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-debug-32:\\drawable_input_bg.xml.flat",
+        "source": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-main-34:\\drawable\\input_bg.xml"
+    },
+    {
+        "merged": "com.cjj.sayhilikes.app-debug-32:/layout_activity_main.xml.flat",
+        "source": "com.cjj.sayhilikes.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-debug-32:\\layout_activity_onboarding.xml.flat",
+        "source": "C:\\Users\\shiver\\AppData\\Local\\Temp\\cursor-sandbox-cache\\6c5f94181f5d3d7b507be52c730cfac3\\gradle\\daemon\\8.9\\com.cjj.sayhilikes.app-main-34:\\layout\\activity_onboarding.xml"
+    }
+]

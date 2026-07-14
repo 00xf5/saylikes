@@ -1,0 +1,6 @@
+=== TEXTS ===
+=== DESCS ===
+'Game view' | com.maleo.bussimulatorid:id/unitySurfaceView | click=false | [0,0][1436,720]
+=== CLICKABLE / IMAGE ===
+android.widget.FrameLayout | android:id/content | click=false | desc='' | text='' | [0,0][1436,720]
+android.view.View | com.maleo.bussimulatorid:id/unitySurfaceView | click=false | desc='Game view' | text='' | [0,0][1436,720]
