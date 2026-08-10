@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a11y_guide_body">Two separate steps:\n\nA) INSTALL (Play Protect)\nTurn off Play Protect scanning briefly to install the APK, or use ADB on a PC. That only affects installation.\n\nB) ACCESSIBILITY (Android restriction)\nSideloaded apps need an extra allow:\n1) App Settings → menu (⋮) → Allow restricted settings\n2) Then Settings → Accessibility → turn ON SayHi Likes\n\nPlay Protect off does NOT replace step B — you still need Allow restricted settings.</string>
+    <string name="a11y_guide_title">Enable Accessibility (required)</string>
+    <string name="a11y_open_accessibility">Open Accessibility</string>
+    <string name="a11y_open_app_settings">Open App Settings</string>
+    <string name="accessibility_description">Automates liking nearby people in SayHi. Only runs when you press Start.</string>
+    <string name="active_within">Active within</string>
+    <string name="activity_log">Activity log</string>
+    <string name="api_base_url">https://saylikes.vercel.app</string>
+    <string name="app_name">SayHi Likes</string>
+    <string name="default_admin_telegram">godfather_bott</string>
+    <string name="enable_accessibility">1. Enable Accessibility</string>
+    <string name="how_many">How many new likes</string>
+    <string name="liked_none_yet">No likes yet — names appear here after a run.</string>
+    <string name="liked_this_run">Liked this run</string>
+    <string name="open_sayhi">2. Open SayHi</string>
+    <string name="speed">Speed</string>
+    <string name="start">Start</string>
+    <string name="status_label">Bot status</string>
+    <string name="status_need_access">Turn on Accessibility for SayHi Likes first</string>
+    <string name="status_ready">Ready — press Start when SayHi is open</string>
+    <string name="status_running">Running… leave SayHi on screen</string>
+    <string name="stop">Stop</string>
+    <style name="SayHiRadio" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:buttonTint">@color/radio_black</item>
+        <item name="buttonTint">@color/radio_black</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Theme.SayHiLikes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#00A39B</item>
+        <item name="colorPrimaryVariant">#00897B</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#26A69A</item>
+        <item name="android:statusBarColor">#00897B</item>
+        <item name="android:navigationBarColor">#121212</item>
+        <item name="android:windowBackground">#1A1A1A</item>
+        <item name="android:textColorPrimary">#FFFFFFFF</item>
+        <item name="android:textColorSecondary">#B3FFFFFF</item>
+        <item name="materialButtonStyle">@style/Widget.SayHi.Button</item>
+        <item name="colorControlNormal">#000000</item>
+        <item name="colorControlActivated">#000000</item>
+    </style>
+    <style name="Widget.SayHi.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#00A39B</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+</resources>
