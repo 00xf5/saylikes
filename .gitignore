@@ -1,0 +1,28 @@
+﻿# Android
+SayHiLikes/.gradle/
+SayHiLikes/app/build/
+SayHiLikes/build/
+SayHiLikes/local.properties
+SayHiLikes/*.apk
+SayHiLikes.apk
+*.apk
+*.keystore
+
+# Node / Next
+sayhi-admin/node_modules/
+sayhi-admin/.next/
+sayhi-admin/.vercel/
+sayhi-admin/data/*.json
+!sayhi-admin/data/.gitkeep
+
+# Env / secrets
+.env
+.env.local
+**/.env.local
+sayhi-admin/.env.local
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
